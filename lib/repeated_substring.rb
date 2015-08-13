@@ -14,28 +14,33 @@ class RepeatedSubstring
               res = tmp_res
             end
           end
-          if res.length > 0 
+          if res.length > 0
             return res
           end
-        end	
+        end
       end
-    end 
+    end
     return 'None'
   end
-  
+
   def find_repeated_substring_len(string, sub_len)
     for i in 0..(string.length/sub_len) do
       rest_string = string[i+sub_len, string.length]
       test_string = string[i, sub_len]
-      if rest_string.include? test_string 
+      if rest_string.include? test_string
          return test_string
       end
     end
     return nil
   end
-  
+
   def find_repeated_substring_file(file_path)
     File.open(file_path).read.each_line.map { |line| find_repeated_substring(line) }
   end
-  
+
+end
+
+prog = RepeatedSubstring.new
+File.open(ARGV[0]).each_line do |line|
+  prog.find_repeated_substring(line)
 end
