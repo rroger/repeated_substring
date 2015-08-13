@@ -7,7 +7,7 @@ class RepeatedSubstring
     if string.is_a? String
       len = string.length
       if len > 3
-        if string.strip.length > 0
+        if string.strip > 0
           for sub_len in 2..(len/2) do
             tmp_res = find_repeated_substring_len(string, sub_len)
             if tmp_res != nil
