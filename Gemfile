@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
 
-ruby File.read('.ruby-version').strip
+ruby '1.8.7'
 
 gem 'rspec'

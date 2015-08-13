@@ -52,14 +52,6 @@ RSpec.describe 'repeated_substring' do
     expext(rs.find_repeated_substring("abcdabcdefgxlslehaabcdefg")).to eq("abcdefg")
   end
 
-  it 'it should return "a a" for "a abda abd"' do
-    rs = RepeatedSubstring.new
-    expext(rs.find_repeated_substring("a abda abd")).to eq("a a")
-  end
-
-  it 'it should return "aa" for "   aabdaa    abd    "' do
-    rs = RepeatedSubstring.new
-    expext(rs.find_repeated_substring("   aabdaa    abd    ")).to eq("aa")
-  end
+  
 
 end
