@@ -42,5 +42,5 @@ end
 
 prog = RepeatedSubstring.new
 File.open(ARGV[0]).each_line do |line|
-  prog.find_repeated_substring(line)
+  puts prog.find_repeated_substring(line)
 end
