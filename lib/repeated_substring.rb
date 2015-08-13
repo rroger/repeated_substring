@@ -34,4 +34,8 @@ class RepeatedSubstring
     return nil
   end
   
+  def find_repeated_substring_file(file_path)
+    File.open(file_path).read.each_line.map { |line| find_repeated_substring(line) }
+  end
+  
 end
