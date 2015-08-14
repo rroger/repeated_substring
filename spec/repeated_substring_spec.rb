@@ -77,4 +77,9 @@ RSpec.describe 'repeated_substring' do
     expect(rs.find_repeated_substring("NONENONE")).to eq("NONE")
   end
 
+  it 'shout return "ab" for "c2c4c5c6cabab"' do
+    rs = RepeatedSubstring.new
+    expect(rs.find_repeated_substring("c2c4c5c6cabab")).to eq("ab")
+  end
+
 end
