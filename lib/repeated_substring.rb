@@ -20,7 +20,7 @@ class RepeatedSubstring
         end
       end
     end
-    return 'None'
+    return 'NONE'
   end
 
   def find_repeated_substring_len(string, sub_len)
