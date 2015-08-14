@@ -24,7 +24,7 @@ class RepeatedSubstring
   end
 
   def find_repeated_substring_len(string, sub_len)
-    for i in 0..(string.length/sub_len) do
+    for i in 0..(string.length-sub_len) do
       rest_string = string[i+sub_len, string.length]
       test_string = string[i, sub_len]
       if rest_string.include? test_string
